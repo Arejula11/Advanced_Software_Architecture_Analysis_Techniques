@@ -44,7 +44,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .
@@ -62,7 +62,7 @@ jobs:
     needs: clone-repository
     steps:
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .
@@ -85,7 +85,7 @@ jobs:
     steps:
       # Download build artifact and use for applicaiton tests
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-artifact
           path: ./build
@@ -100,7 +100,7 @@ jobs:
       contents: read
     steps:
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .

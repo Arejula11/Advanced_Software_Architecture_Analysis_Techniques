@@ -48,7 +48,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .
@@ -66,7 +66,7 @@ jobs:
     needs: code-analysis
     steps:
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .
@@ -91,7 +91,7 @@ jobs:
     steps:
       # Download build artifact and use for applicaiton tests
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-artifact
           path: ./build
@@ -158,19 +158,19 @@ jobs:
     steps:
       # Download Repo
       - name: Download repository artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: repository-artifacts
           path: .
       # Download build artifact if uploaded earlier and places it in ./build folder
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-artifact
           path: ./build
       # Download GroupReport PDF and place in ./report folder
       - name: Download GroupReport
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: GroupReport-pdf
           path: ./handin
