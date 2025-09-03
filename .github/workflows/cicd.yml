@@ -71,7 +71,7 @@ jobs:
         run:  echo "build app"
       # Upload compiled artifact
       - name: Upload Build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact
           path: ./src # Replace with path to your compiled artifact

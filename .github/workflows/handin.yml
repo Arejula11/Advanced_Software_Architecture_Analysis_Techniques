@@ -75,7 +75,7 @@ jobs:
         run:  echo "build app"
       # Upload compiled artifact
       - name: Upload Build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact
           path: ./src # Replace with path to your compiled artifact
@@ -145,7 +145,7 @@ jobs:
           mv report/GroupTemplate/main.pdf handin/report${{ env.GROUP_NUMBER }}.pdf
       
       - name: Upload GroupReport-pdf artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: GroupReport-pdf 
           path: handin/
@@ -176,7 +176,7 @@ jobs:
           path: ./handin
       # Upload final handin artifcat, can be downloaded from Repository -> Actions -> handin-workflow -> Scroll down and click
       - name: Upload handin artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: handin-${{ env.PROJECT_NAME }}-${{ env.GROUP_NUMBER }}
           path: .
